@@ -1,0 +1,57 @@
+.content
+{
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    max-width: 600px;
+    padding: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+    line-height: 1.5;
+    margin: 0 auto;
+}
+
+.logo
+{
+    max-width: 150px;
+    user-select: none;
+    margin-top: 50px;
+}
+
+h1, h2
+{
+    text-transform: uppercase;
+    text-align: center;
+}
+
+h2
+{
+    color: #006EB6;
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+h1
+{
+    margin-bottom: 0px;
+    letter-spacing: 3px;
+}
+
+footer
+{
+    text-align: center;
+}
+
+li
+{
+    margin-top: 20px;
+}
+
+header
+{
+    border-bottom: 1px solid black;
+}
+
+p {
+    margin-top: 50px;
+}
