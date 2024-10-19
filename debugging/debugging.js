@@ -1,6 +1,6 @@
 function circleArea(radius) {
     const pi = 3.14;
-    const area = radius * pi;
+    const area = radius * radius * pi;
     return area;
 }
 
