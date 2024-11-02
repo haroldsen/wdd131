@@ -1,0 +1,146 @@
+:root {
+    --cardColor: #dedede;
+    --barColor: #6e6e6e;
+}
+
+body {
+    font-family: monospace;
+    font-size: 1.5em;
+    padding-top: 5vw;
+}
+
+#card-container {
+    display: grid;
+    width: 50%;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 25% 25% 25% 25%;
+    aspect-ratio: 3.375 / 2.125;
+}
+
+#card-front {
+    padding: 4%;
+    width: 100%;
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 3;
+    z-index: 10;
+    display: grid;
+    grid-template-areas:
+        "total chip"
+        "number number"
+        "owner expire"
+    ;
+    gap: 2%;
+}
+
+#total {
+    grid-area: total;
+    margin: 0;
+}
+
+#card-image {
+    grid-area: chip;
+    justify-self: end;
+}
+
+#card-number-block {
+    display: flex;
+    flex-direction: column;
+    grid-area: number;
+}
+
+#card-holder-block {
+    grid-area: owner;
+    display: flex;
+    flex-direction: column;
+}
+
+#expiration-block {
+    display: flex;
+    flex-direction: column;
+}
+
+#date-block {
+    display: flex;
+    flex-direction: row;
+}
+
+#card-back {
+    width: 100%;
+    grid-column: 2 / span 3;
+    grid-row: 2 / span 3;
+    z-index: 9;
+    display: grid;
+    grid-template-areas:
+        "bar bar"
+        "blank cvv"
+    ;
+}
+
+#bar {
+    background-color: var(--barColor);
+    height: 40%;
+    grid-area: bar;
+    margin-top: 5%;
+}
+
+#cvv-block {
+    grid-area: cvv;
+    align-self: center;
+    justify-self: end;
+    display: flex;
+    flex-direction: column;
+    font-size: .75em;
+    width: 15%;
+    margin-right: 10%;
+    height: 100%;
+}
+
+#cvv-block input {
+    width: 100%;
+}
+
+#cvv-block label {
+    font-size: .8em;
+}
+
+.card {
+    background-color: var(--cardColor);
+    border-radius: 10px;
+    /* height: 0;
+    padding-bottom: 62.96%; */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    aspect-ratio: 3.375 / 2.125;
+    width: 40%;
+    /* padding: 2%; */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    width: 90%;
+    height: 1vw;
+    padding: 2%;
+}
+
+button {
+    align-self: end;
+    margin-right: 25%;
+}
+
+/* @media (max-width: 850px) {
+    body {
+        font-size: 1.15em;
+    }
+    
+    input {
+        height: 15%;
+    }
+
+    #expiration-block input {
+        height: 40%;
+    }
+} */
