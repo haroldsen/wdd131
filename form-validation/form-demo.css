@@ -62,6 +62,10 @@ div {
   flex-direction: column;
 }
 
+#address {
+  height: 4em;
+}
+
 select {
   height: 22px;
   border-radius: 3px;
