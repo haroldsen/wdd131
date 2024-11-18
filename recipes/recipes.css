@@ -125,6 +125,7 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: 655px;
 }
 
 .recipeBlock {
@@ -195,4 +196,8 @@ h2 {
     .recipeDescription {
         display: none;
     }
+}
+
+#noResultsMessage {
+    color: red;
 }
