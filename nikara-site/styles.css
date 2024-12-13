@@ -2,6 +2,7 @@
 :root {
     --col1: #F8B195;
     --col2: #355C7D;
+    --col3: #264159;
 }
 
 #content {
@@ -33,27 +34,34 @@ header {
     gap: 10px;
 }
 
-#page-selector {
+.drop-down {
+    display: none;
+    flex-direction: column;
     width: 100%;
     background-color: var(--col2);
-    padding: 5px;
+    padding: 0;
+    margin: 0;
+    /* padding: 5px;
     color: white;
     border: none;
     font-size: 20px;
     text-align: center;
     margin-top: 10px;
-    letter-spacing: 1px;
+    letter-spacing: 1px; */
 }
 
-/* #page-selector:focus {
-    border: #355C7D;
-    border-radius: 0;
-} */
+button {
+    width: 100%;
+    border: none;
+    padding: 5px;
+    background-color: var(--col2);
+    color: white;
+    font-size: 20px;
+}
 
-/* #page-selector option:hover {
-    color: var(--col2);
-    background-color: var(--col1);
-} */
+button:hover {
+    background-color: var(--col3);
+}
 
 header h1 {
     text-align: center;
@@ -76,7 +84,7 @@ header h2 {
     overflow: hidden;
 }
 
-main {
+#page-content {
     /* background-color: #F8B195; */
     margin-top: 35px;
     display: flex;
@@ -86,12 +94,12 @@ main {
     gap: 35px;
 }
 
-main h1 {
+#page-content h1 {
     text-align: center;
     margin: 0;
 }
 
-main h2 {
+#page-content h2 {
     text-align: center;
     margin: 0;
 }
@@ -111,12 +119,12 @@ main h2 {
     width: 100%;
 } */
 
-main p {
+#page-content p {
     font-size: 20px;
     width: 80%;
 }
 
-main h3 {
+#page-content h3 {
     width: 80%;
     text-align: center;
     line-height: 35px;
@@ -133,4 +141,35 @@ main h3 {
 
 ::-webkit-scrollbar-track {
     background-color: white; /* Background color of the scrollbar track */
+}
+
+#open-submenu-button {
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+/* #close-submenu-button {
+    display: none;
+} */
+
+#subsection-img-block {
+    background-color: black;
+    width: 100%;
+    /* aspect-ratio: 3 / 2; */
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#subpage-content {
+    /* background-color: #F8B195; */
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
 }
