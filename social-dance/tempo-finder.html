@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="dance-site.js" type="module"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>C-Swing | Tempo Finder</title>
+    <meta name="author" content="John Doe">
+    <meta name="description" content="Free Web tutorials">
+</head>
+<body>
+    <header>
+        <nav class="top-navigation">
+            <a id="logo-holder"><img src="images/logo-yellow.svg" alt="BYUI logo" id="header-logo" draggable="false"></a>
+            <!-- <img class="hamburger-icon" src="hamburger-icon.svg" draggable="false"> -->
+            <ul id="menu">
+                <li><a class="tab" href="index.html" draggable="false">HOME</a></li>
+                <li><a class="selected-tab" draggable="false">TEMPO&nbsp;&nbsp;FINDER</a></li>
+                <li><a class="tab" href="practice-videos.html" draggable="false">PRACTICE&nbsp;&nbsp;VIDEOS</a></li>
+                <li><a class="tab" href="practice-music.html" draggable="false">PRACTICE&nbsp;&nbsp;MUSIC</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>- TEMPO&nbsp;&nbsp;FINDER -</h1>
+            <div id="find-tempo-section">
+                <div id="instruction-block">
+                    <h2>Instructions:</h2>
+                    <p id="tempo-instructions">
+                        Begin pressing the button below for each beat.
+                    </p>
+                    <p>
+                        For desktop users, you can also<br>press the space bar on your keyboard.
+                    </p>
+                </div>
+                <h3 id="click-counter">Click Count: 0</h3>
+                <button id="space-bar-container"><img src="images/button-up.svg" alt="BYUI logo" class="space-bar" draggable="false"></button>
+                <span id="tempo-measurement-container">
+                    <label>Are we finding the BPM or MPM?</label>
+                    <select id="option-container">
+                        <option>BPM</option>
+                        <option>MPM</option>
+                    </select>
+                </span>
+                <button class="reset-tempo-finder">Reset</button>
+            </div>
+        <div id="display-tempo-section" class="hide">
+            <div id="results-block">
+                <h2>- RESULTS -</h2>
+                <h3 id="tempo-result-header">This song is 0 beats per minute!</h3>
+            </div>
+            <table id="dance-result-table">
+            </table>
+            <!-- <div id="import-file-block">
+                <select id="option-container">
+                    <option>dance1</option>
+                    <option>dance2</option>
+                </select>
+                <p>Drag and Drop Here to Upload a File</p>
+                <p>or</p>
+                <button>Browse Files</button>
+                <button>Download File</button>
+            </div> -->
+            <button class="reset-tempo-finder">Find Another Tempo!</button>
+        </div>
+    </main>
+    <footer>
+        
+    </footer>
+</body>
+</html>
