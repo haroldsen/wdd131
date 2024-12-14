@@ -1,8 +1,8 @@
 :root {
 --pink1: #ffa6a6;
 --orangeL: #FFE1B3;
---orange: #FFB13B;
---orangeD: #8F6321;
+--orange: #ffa31a;
+--orangeD: #533913;
 --black1: #333333;
 --white1: #ebebeb;
 --teal: #00CCBD;
@@ -19,8 +19,9 @@
 body {
     margin: 0;
     font-family: 'Poppins';
-    overflow-x: hidden;
     width: 100vw;
+    overflow-x: hidden;
+    /* min-height: 100vh; */
 }
 
 ul {
@@ -39,7 +40,7 @@ header {
     width: 100%;
     top: 0;
     left: 0;
-    height: min(5vw, 60px);
+    height: 60px;
     overflow: hidden;
     user-select: none;
     z-index: 1000;
@@ -75,7 +76,8 @@ header {
     padding-left: min(1vw, 20px);
     display: flex;
     align-items: center;
-    font-size: min(2.5vw, 1.25em);
+    text-align: center;
+    font-size: min(4vw, 1.25em);
 }
 
 .tab {
@@ -89,20 +91,22 @@ header {
 }
 
 .selected-tab {
-    color: white;
+    color: var(--orangeD);
     border-bottom: solid white 10px;
     border-top: solid var(--orange) 10px;
 }
 
 #logo-holder {
     height: 100%;
-    margin-left: 20px;
+    margin-left: min(2vw, 20px);
     display: flex;
     align-items: center;
 }
 
 main {
-    margin-top: min(5vw, 60px);
+    margin-top: 60px;
+    max-width: 100vw;
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -124,7 +128,7 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 70vh;
+    height: auto;
     /* background-color: blue; */
 }
 
@@ -344,8 +348,12 @@ td {
     width: 600px;
 }
 
-#introText {
-    width: 50%;
+.introText {
+    width: 40%;
+    max-width: 100vw;
+    min-width: 340px;
+    text-align: center;
+    font-size: min(5vw, 1.5em);
 }
 
 .cls-1 {
@@ -367,6 +375,36 @@ td {
     border: none;
     border-radius: 50px;
     cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+#what-next-section {
+    margin-top: 8vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    height: auto;
+    gap: 5vw;
+}
+
+.text-grouping {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--orange);
+    margin-top: 10vw;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 @media (max-width: 1000px) {
@@ -386,6 +424,10 @@ td {
         /* text-shadow: 4px 4px 5px rgba(0, 0, 0, 1); */
     }
 
+    #menu a.selected-tab {
+        display: none;
+    }
+
     /* #welcomeBlock u {
         text-decoration-color: var(--orange);
     } */
@@ -394,6 +436,10 @@ td {
         grid-area: all;
         width: 100%;
         background-color: var(--darkTransTeal);
+    }
+
+    #songResults {
+        grid-template-columns: 1fr 1fr;
     }
 }
 
@@ -443,5 +489,13 @@ td {
 
     #welcomeBlock u {
         text-decoration-thickness: 4px;
+    }
+
+    #songResults {
+        grid-template-columns: 1fr;
+    }
+
+    #header-logo {
+        height: 55%;
     }
 }
