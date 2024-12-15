@@ -163,18 +163,16 @@ function practiceMusicPage() {
     class PracticeSong {
         _name;
         _imgSrc;
-        _imgAlt;
     
-        constructor(name, imgSrc, imgAlt) {
+        constructor(name, imgSrc) {
             this._name = name;
             this._imgSrc = imgSrc;
-            this._imgAlt = imgAlt;
         }
     
         toHTML() {
             return `
                 <div class="songContainer">
-                    <img src="${this._imgSrc}" alt="${this._imgAlt}" draggable="false">
+                    <img src="${this._imgSrc}" alt="The '${this._name}' album cover." draggable="false">
                     <p>${this._name.replaceAll(" ", "&nbsp;")}</p>
                     <button class="green-button">Download</button>
                 </div>
@@ -183,14 +181,14 @@ function practiceMusicPage() {
     }
 
     let practiceSongs = [
-        new PracticeSong("FOXTROT ONLY", "images/foxtrot.svg", "an image"),
-        new PracticeSong("SWING ONLY", "images/swing.svg", "an image"),
-        new PracticeSong("CHA CHA ONLY", "images/cha cha.svg", "an image"),
-        new PracticeSong("WALTZ ONLY", "images/waltz.svg", "an image"),
-        new PracticeSong("FOXTROT ONLY", "images/foxtrot.svg", "an image"),
-        new PracticeSong("SWING ONLY", "images/swing.svg", "an image"),
-        new PracticeSong("CHA CHA ONLY", "images/cha cha.svg", "an image"),
-        new PracticeSong("WALTZ ONLY", "images/waltz.svg", "an image")
+        new PracticeSong("10 MIN FOXTROT VOL. 1", "images/foxtrot.svg"),
+        new PracticeSong("10 MIN SWING VOL. 1", "images/swing.svg"),
+        new PracticeSong("10 MIN CHA CHA VOL. 1", "images/cha cha.svg"),
+        new PracticeSong("10 MIN WALTZ VOL. 1", "images/waltz.svg"),
+        new PracticeSong("10 MIN FOXTROT VOL. 2", "images/foxtrot.svg"),
+        new PracticeSong("10 MIN SWING VOL. 2", "images/swing.svg"),
+        new PracticeSong("10 MIN CHA CHA VOL. 2", "images/cha cha.svg"),
+        new PracticeSong("10 MIN WALTZ VOL. 2", "images/waltz.svg")
     ];
 
     const songResultsUl = document.getElementById("songResults");

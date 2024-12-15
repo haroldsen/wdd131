@@ -181,6 +181,10 @@ h1 {
     display: none;
 }
 
+#tempo-result-header {
+    text-align: center;
+}
+
 .reset-tempo-finder {
     background-color: var(--teal);
     font-size: 1em;
@@ -375,6 +379,7 @@ td {
     border: none;
     border-radius: 50px;
     cursor: pointer;
+    text-align: center;
     text-decoration: none;
     color: black;
 }
