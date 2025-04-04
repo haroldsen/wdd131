@@ -32,7 +32,7 @@ function handleNavClick(e) {
         updatePage(
             "Sound Thinkers",
             "We frame and solve problems using creative and critical thinking.",
-            "img src",
+            "media/thinker.jpg",
             "a picture",
             `“A problem arises, its dimensions are studied out, a question is asked, and with sufficient faith, God leads us to answers ... God does not simply hand down information. He expects us to figure things out through prayerful searching and sound thinking.” (Gospel Topics – “Revelation”)`    
         );
@@ -80,7 +80,7 @@ function handleNavClick(e) {
         updatePage(
             "Citizen Professionals",
             "We adopt and follow guidelines of ethical behavior as we serve children, families, colleagues, and society.",
-            "",
+            "media/citizen.jpg",
             "a picture",
             `“The members of our Church throughout the world accept and try to live by ethical principles reflected in our Articles of Faith. I quote part of it: 'We believe in being honest, true, chaste, benevolent ... and in doing good to all men. ... If there is anything virtuous, lovely, or of good report or praiseworthy, we seek after these things.'” (Dieter F. Uchtdorf)`
         );
@@ -102,21 +102,14 @@ function handleNavClick(e) {
         );
     }
 
-    else if (clickedTab == 'Team Plan 1') {
-        updatePage(
-            "Skilled Collaborators",
-            "We work effectively with others to accomplish a shared vision.",
-            "media/collaboratorsTeamLessonPlan1.jpg",
-            "a picture",
-            ''
-        );
-    } else if (clickedTab == 'Solo Plan 1') {
+    else if (clickedTab == 'Solo Plan 1') {
         updatePage(
             "Intentional Teachers",
             "We incorporate multiple instructional methods, focusing on practical, first-hand learning.",
-            "media/collaboratorsTeamLessonPlan1.jpg",
+            "media/solo-plan.pdf",
             "a picture",
-            ''
+            '',
+            'embed'
         );
     } else if (clickedTab == 'Flanel Board') {
         updatePage(
@@ -166,6 +159,33 @@ function handleNavClick(e) {
             "media/ethics.jpg",
             "a picture",
             '',
+        );
+    } else if (clickedTab == 'Team Plan 1') {
+        updatePage(
+            "Skilled Collaborators",
+            "We work effectively with others to accomplish a shared vision.",
+            "media/team-plan.pdf",
+            "a picture",
+            '',
+            'embed'
+        );
+    } else if (clickedTab == 'Professional Paradigm') {
+        updatePage(
+            "Developmental Practitioners",
+            "We implement appropriate, research-based practices that foster children's development in multiple domains.",
+            "media/pro-paradigm.pdf",
+            "a picture",
+            '',
+            'embed'
+        );
+    } else if (clickedTab == 'DAP Paper') {
+        updatePage(
+            "Developmental Practitioners",
+            "We implement appropriate, research-based practices that foster children's development in multiple domains.",
+            "media/dap-paper.pdf",
+            "a picture",
+            '',
+            'embed'
         );
     }
 }
