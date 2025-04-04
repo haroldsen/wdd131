@@ -5,10 +5,16 @@ const imgContainer = document.getElementById('img-container');
 const smallQuoteBlock = document.getElementById('small-quote');
 const largeQuoteBlock = document.getElementById('large-quote');
 
-function updatePage(headerP, smallQuoteP, imgSrcP, imgAltP, largeQuoteP) {
+function updatePage(headerP, smallQuoteP, imgSrcP, imgAltP, largeQuoteP, elType='img') {
     tabHeader.innerHTML = headerP;
     smallQuoteBlock.innerHTML = smallQuoteP;
-    imgContainer.innerHTML = `<img class="tab-image" src="${imgSrcP}" alt="${imgAltP}">`;
+    let last = '';
+    if (elType == 'img') {
+        last = ` alt="${imgAltP}"`;
+    } else {
+        last = ' type="application/pdf"';
+    }
+    imgContainer.innerHTML = `<${elType} class="tab-image" src="${imgSrcP}"${last}>`;
     largeQuoteBlock.innerHTML = largeQuoteP;
 }
 
@@ -103,6 +109,63 @@ function handleNavClick(e) {
             "media/collaboratorsTeamLessonPlan1.jpg",
             "a picture",
             ''
+        );
+    } else if (clickedTab == 'Solo Plan 1') {
+        updatePage(
+            "Intentional Teachers",
+            "We incorporate multiple instructional methods, focusing on practical, first-hand learning.",
+            "media/collaboratorsTeamLessonPlan1.jpg",
+            "a picture",
+            ''
+        );
+    } else if (clickedTab == 'Flanel Board') {
+        updatePage(
+            "Joyful Learners",
+            "We follow our passions and seek joy in our studies, displaying creativity and integrity.",
+            "media/flanel.jpg",
+            "a picture",
+            ''
+        );
+    } else if (clickedTab == 'Testimony Post') {
+        updatePage(
+            "Disciples of Jesus Christ",
+            "We believe in Jesus Christ as the Son of God and strive to follow Him.",
+            "media/gospel-post.png",
+            "a picture",
+            ''
+        );
+    } else if (clickedTab == 'Sock Puppets') {
+        updatePage(
+            "Joyful Learners",
+            "We follow our passions and seek joy in our studies, displaying creativity and integrity.",
+            "media/socks.jpg",
+            "a picture",
+            ''
+        );
+    } else if (clickedTab == 'Temple Marriage') {
+        updatePage(
+            "Disciples of Jesus Christ",
+            "We believe in Jesus Christ as the Son of God and strive to follow Him.",
+            "media/temple-marriage.jpg",
+            "a picture",
+            ''
+        );
+    } else if (clickedTab == 'Home Asses') {
+        updatePage(
+            "Sound Thinkers",
+            "We frame and solve problems using creative and critical thinking.",
+            "media/home-assessment.pdf",
+            "a picture",
+            '',
+            'embed'
+        );
+    } else if (clickedTab == 'Code of Ethics') {
+        updatePage(
+            "Citizen Professionals",
+            "We adopt and follow guidelines of ethical behavior as we serve children, families, colleagues, and society.",
+            "media/ethics.jpg",
+            "a picture",
+            '',
         );
     }
 }

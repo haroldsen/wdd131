@@ -158,3 +158,6 @@ main {
     width: 100%;
 }
 
+embed {
+    height: 750px;
+}
