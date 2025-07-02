@@ -101,8 +101,9 @@ main {
 }
 
 .block-item img {
-    width: 100%;
+    max-width: 100%;
     border-radius: 15px;
+    max-height: 90vh;
 }
 
 nav {
