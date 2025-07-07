@@ -23,6 +23,16 @@ const aboutMeContent = `
     </div>
 
     <div class="block-item">
+        <h3>THIS I KNOW</h3>
+        <p>
+            What it is.
+            Why it is important.
+            What you learn about me.
+        </p>
+        <a href="media/this-i-know.pdf" target="_blank">Check it out!</a>
+    </div>
+
+    <div class="block-item">
         <h3>PROFESSIONAL PARADIGM</h3>
         <p>
             This document highlights four child development theorists and how they have influenced my own personal philosophies.
