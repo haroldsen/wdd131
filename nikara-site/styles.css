@@ -2,7 +2,7 @@
 :root {
     --col1: #F8B195;
     --col2: #355C7D;
-    --col3: #264159;
+    --col3: #1f3447;
     --col4: #FCD9CB;
 }
 
@@ -22,6 +22,12 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
     margin: 0;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
 }
 
 #content {
@@ -94,10 +100,33 @@ main {
     color: white;
     text-decoration: none;
     font-size: 20px;
+    position: relative;
+    transition: ease 200ms;
 }
 
 .block-item a:hover {
     background-color: var(--col3);
+    top: 1px;
+}
+
+.block-item button {
+    background-color: var(--col2);
+    padding: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    border: none;
+    position: relative;
+    transition: ease 200ms;
+}
+
+.block-item button:hover {
+    background-color: var(--col3);
+    cursor: pointer;
+    top: 1px;
 }
 
 .block-item img {
@@ -124,6 +153,7 @@ nav button {
     height: 100%;
     padding-left: 15px;
     padding-right: 15px;
+    transition: ease 200ms;
 }
 
 nav button:hover {
@@ -132,12 +162,12 @@ nav button:hover {
 }
 
 ::-webkit-scrollbar {
-    width: 10px; /* Width of the scrollbar */
+    width: 12px; /* Width of the scrollbar */
 }
 
 ::-webkit-scrollbar-thumb {
     background-color: var(--col2); /* Color of the scroll thumb */
-    border-radius: 5px; /* Rounded corners */
+    border-radius: 6px; /* Rounded corners */
 }
 
 ::-webkit-scrollbar-track {

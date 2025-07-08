@@ -3,6 +3,13 @@ const aboutMeContent = `
     <div class="block-item">
         <h3>ABOUT ME</h3>
         <img src="media/nature-large.jpg">
+        <p>
+            bottom text
+        </p>
+        <div class="row">
+            <button><</button>
+            <button>></button>
+        </div>
     </div>
 
     <div class="block-item">
@@ -19,7 +26,7 @@ const aboutMeContent = `
         <p>
             I won't blame you for wanting to hire me after reading about me and my husband, so I'll just put this resume right here ;)
         </p>
-        <a href="media/pro-paradigm.pdf" target="_blank">Check it out!</a>
+        <a href="media/resume.pdf" target="_blank">Check it out!</a>
     </div>
 
     <div class="block-item">
