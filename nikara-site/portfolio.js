@@ -120,9 +120,9 @@ const observationAndAssessmentContent = `
     <div class="block-item">
         <h3>ECERS</h3>
         <p>
-            What it is.
-            Why it is important.
-            What you learn about me.
+            This is the Early Childhood Environment Rating Scale which is used to measure the quality of a childhood program.
+            ECERS is important because it helps programs know where they can make improvements.
+            This document shows my proficiency in conducting this type of assessment.
         </p>
         <a href="media/ecers.pdf" target="_blank">Check it out!</a>
     </div>
@@ -130,9 +130,9 @@ const observationAndAssessmentContent = `
     <div class="block-item">
         <h3>AGES AND STAGES QUESTIONARE</h3>
         <p>
-            What it is.
-            Why it is important.
-            What you learn about me.
+            This questionare helps identify if a child is meeting certain, developmental milestones.
+            It is important because it helps parents know what specific needs their child may have and offers resources to seek intervention.
+            This questionare demonstraits my ability to communicate with parents and to offer ideas for how they can best help their child.
         </p>
         <a href="media/asq.pdf" target="_blank">Check it out!</a>
     </div>
@@ -140,9 +140,9 @@ const observationAndAssessmentContent = `
     <div class="block-item">
         <h3>OBSERVATION EXAMPLES</h3>
         <p>
-            What it is.
-            Why it is important.
-            What you learn about me.
+            This is a collection of various observation types including an anecdotal record, running record, frequency sample, and checklist.
+            These are valuable because they help document the behaviors of children.
+            This demonstrates my ability to document my observations in concise, descriptive, and structured ways.
         </p>
         <a href="media/observation-assignment.pdf" target="_blank">Check it out!</a>
     </div>
