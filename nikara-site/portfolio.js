@@ -2,39 +2,29 @@
 const aboutMeContent = `
     <div class="block-item">
         <h3>ABOUT ME</h3>
-        <img src="media/nature-large.jpg">
-        <p>
-            bottom text
-        </p>
         <div class="row">
-            <button><</button>
-            <button>></button>
+            <button id="<"><</button>
+            <div class="column">
+                <img id="about-me-img" src="media/grad-pic.jpg">
+                <p id="about-me-text">
+                    I graduated from BYU-Idaho in July of 2025 with a degree in child development.
+                </p>
+            </div>
+            <button id=">">></button>
         </div>
     </div>
 
     <div class="block-item">
-        <h3>MY AMAZING HUBBY</h3>
-        <img src="media/temple-marriage.jpg">
-        <p>
-            Isn't he just a cutie!?  He also has rippling muscles.
-        </p>
-
-    </div>
-
-    <div class="block-item">
         <h3>MY RESUME</h3>
-        <p>
-            I won't blame you for wanting to hire me after reading about me and my husband, so I'll just put this resume right here ;)
-        </p>
         <a href="media/resume.pdf" target="_blank">Check it out!</a>
     </div>
 
     <div class="block-item">
         <h3>THIS I KNOW</h3>
         <p>
-            What it is.
-            Why it is important.
-            What you learn about me.
+            This document outlines my core beliefs as a child development professional.
+            I think it's important to reflect on our core beliefs because they guide our interactions with children.
+            From this document, you will see that I believe we have a profound influence on children.
         </p>
         <a href="media/this-i-know.pdf" target="_blank">Check it out!</a>
     </div>
@@ -127,8 +117,71 @@ const skilledCollaboratorContent = `
 `;
 
 const observationAndAssessmentContent = `
+    <div class="block-item">
+        <h3>ECERS</h3>
+        <p>
+            What it is.
+            Why it is important.
+            What you learn about me.
+        </p>
+        <a href="media/ecers.pdf" target="_blank">Check it out!</a>
+    </div>
 
+    <div class="block-item">
+        <h3>AGES AND STAGES QUESTIONARE</h3>
+        <p>
+            What it is.
+            Why it is important.
+            What you learn about me.
+        </p>
+        <a href="media/asq.pdf" target="_blank">Check it out!</a>
+    </div>
+
+    <div class="block-item">
+        <h3>OBSERVATION EXAMPLES</h3>
+        <p>
+            What it is.
+            Why it is important.
+            What you learn about me.
+        </p>
+        <a href="media/observation-assignment.pdf" target="_blank">Check it out!</a>
+    </div>
 `;
+
+const bioImgSrcs = [
+    "media/grad-pic.jpg",
+    "media/nature-large.jpg",
+    "media/temple-marriage.jpg"
+];
+
+const bioTexts = [
+    "I graduated from BYU-Idaho in July of 2025 with a degree in child development.",
+    "I love nature!  I grew up in Kentucky where I spent a lot of time outdoors as a child.  I want to give children the same opportunities to learn from nature that I had.",
+    "I married my husband, Christian, in May of 2023.  He's been my biggest supporter in my persuit of my professional goals."
+];
+
+let bioIndex = 0;
+
+function cycleThroughBio(e) {
+    let iterator = 0;
+    console.log(e.target.innerHTML);
+    if (e.target.innerHTML == '&lt;') {
+        iterator = -1;
+    } else if (e.target.innerHTML == '&gt;') {
+        iterator = 1;
+    }
+    console.log(iterator);
+    bioIndex = (bioIndex + iterator)
+    if (bioIndex >= bioImgSrcs.length) {
+        bioIndex = 0;
+    }
+    if (bioIndex < 0) {
+        bioIndex = bioImgSrcs.length - 1;
+    }
+    console.log(bioIndex);
+    document.getElementById('about-me-img').src = bioImgSrcs[bioIndex];
+    document.getElementById('about-me-text').innerHTML = bioTexts[bioIndex];
+}
 
 const pageContent = document.getElementById('page-content');
 
@@ -136,6 +189,8 @@ function handleNav(e) {
     const clickedTab = e.target.innerHTML;
     if (clickedTab == 'About Me') {
         pageContent.innerHTML = aboutMeContent;
+        document.getElementById('<').addEventListener('click', cycleThroughBio);
+        document.getElementById('>').addEventListener('click', cycleThroughBio);
     } else if (clickedTab == 'Personal Ethics') {
         pageContent.innerHTML = personalEthicsContent;
     } else if (clickedTab == 'Intentional Teacher') {

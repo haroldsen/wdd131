@@ -24,10 +24,22 @@ p {
     margin: 0;
 }
 
+img {
+    user-select: none;
+}
+
 .row {
     display: flex;
     flex-direction: row;
     gap: 15px;
+    align-items: center;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
 }
 
 #content {
@@ -53,6 +65,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 50px;
+    width: 100%;
 }
 
 #img-block {
@@ -129,6 +142,10 @@ main {
     top: 1px;
 }
 
+.row button {
+    height: 30%;
+}
+
 .block-item img {
     max-width: 100%;
     border-radius: 15px;
@@ -159,6 +176,11 @@ nav button {
 nav button:hover {
     background-color: var(--col3);
     cursor: pointer;
+}
+
+#about-me-img {
+    object-fit: contain;
+    aspect-ratio: 4 / 3;
 }
 
 ::-webkit-scrollbar {
