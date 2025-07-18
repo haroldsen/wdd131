@@ -118,6 +118,16 @@ const skilledCollaboratorContent = `
 
 const observationAndAssessmentContent = `
     <div class="block-item">
+        <h3>MY ETHICAL COMMITMENT</h3>
+        <p>
+            This document outlines my commitment to be ethical in my interactions with children, families, colleagues, and society.
+            I believe ethical commitment is crucial because children are the future.  We cannot afford to mistreat or misdirect their potential.
+            When reviewing this document, you will find that I value creating a legacy of integrity.
+        </p>
+        <a href="media/my-ethical-commitment.pdf" target="_blank">Check it out!</a>
+    </div>
+
+    <div class="block-item">
         <h3>ECERS</h3>
         <p>
             This is the Early Childhood Environment Rating Scale which is used to measure the quality of a childhood program.
@@ -200,6 +210,19 @@ function handleNav(e) {
     } else if (clickedTab == 'Observation and Assessment') {
         pageContent.innerHTML = observationAndAssessmentContent;
     }
-};
+}
 
+function toggleScreenSizeWarning() {
+    console.log(window.innerWidth);
+    if (window.innerWidth < 600) {
+        document.getElementById('screen-size-warning').style.display = 'flex';
+        document.getElementById('content').style.display = 'none';
+    } else {
+        document.getElementById('screen-size-warning').style.display = 'none';
+        document.getElementById('content').style.display = 'flex';
+    }
+}
+
+toggleScreenSizeWarning();
 document.addEventListener('click', handleNav);
+window.addEventListener('resize', toggleScreenSizeWarning);
