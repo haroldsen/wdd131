@@ -148,13 +148,21 @@ const observationAndAssessmentContent = `
     </div>
 
     <div class="block-item">
-        <h3>OBSERVATION EXAMPLES</h3>
+        <h3>observation examples</h3>
         <p>
             This is a collection of various observation types including an anecdotal record, running record, frequency sample, and checklist.
             These are valuable because they help document the behaviors of children.
             This demonstrates my ability to document my observations in concise, descriptive, and structured ways.
         </p>
         <a href="media/observation-assignment.pdf" target="_blank">Check it out!</a>
+    </div>
+
+    <div class="block-item">
+        <h3>assessment comparison chart</h3>
+        <p>
+
+        </p>
+        <a href="media/assessment-comparison-chart-2.pdf" target="_blank">Check it out!</a>
     </div>
 `;
 

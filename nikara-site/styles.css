@@ -92,6 +92,7 @@ main {
 
 .block-item h3 {
     font-size: 30px;
+    text-transform: uppercase;
 }
 
 .block-item p {
