@@ -115,7 +115,6 @@ main {
     text-decoration: none;
     font-size: 20px;
     position: relative;
-    transition: ease 200ms;
 }
 
 .block-item a:hover {
@@ -134,7 +133,6 @@ main {
     font-size: 20px;
     border: none;
     position: relative;
-    transition: ease 200ms;
 }
 
 .block-item button:hover {
@@ -163,7 +161,7 @@ nav {
     justify-content: space-evenly;
 }
 
-nav button {
+nav a {
     background-color: var(--col2);
     border: none;
     color: white;
@@ -171,12 +169,27 @@ nav button {
     height: 100%;
     padding-left: 15px;
     padding-right: 15px;
-    transition: ease 200ms;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
 }
 
-nav button:hover {
+nav a:hover {
     background-color: var(--col3);
     cursor: pointer;
+}
+
+.selected-tab {
+    height: calc(100% - 15px);
+    border-top: solid var(--col2) 7.5px;
+    border-bottom: solid var(--col3) 7.5px;
+}
+
+.selected-tab:hover {
+    cursor: default;
+    background-color: var(--col2);
 }
 
 #about-me-img {
@@ -206,4 +219,48 @@ nav button:hover {
     text-align: center;
     align-items: center;
     justify-content: center;
+}
+
+@media (max-width: 850px) {
+    nav a {
+        font-size: 15px;
+    }
+
+    .block-item h3 {
+        font-size: 20px;
+    }
+
+    #img-block {
+        width: 125px;
+        height: 125px;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    header h2 {
+        font-size: 15px;
+    }
+
+    #content {
+        padding: 30px;
+        gap: 30px;
+    }
+
+    .block-item p {
+        line-height: 30px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    #img-block {
+        width: 100px;
+        height: 100px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
 }
